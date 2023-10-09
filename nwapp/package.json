@@ -1,0 +1,15 @@
+{
+  "name": "nwapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lyndon Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "got": "^13.0.0"
+  }
+}
