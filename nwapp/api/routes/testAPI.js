@@ -12,6 +12,7 @@ try {
 
       // S+ Data
       const sPlusA = [];
+      const sPlusAA = [];
       const sPlus = root.querySelector(".tier-rating.s-plus").nextSibling;
       const sPlusChar = sPlus.querySelectorAll(".custom-tier-burst");
       const sPlusList = sPlusChar.map((x) =>
@@ -19,8 +20,8 @@ try {
       );
 
       for (y = 0; y < sPlusList.length; y++) {
-        const sPlusFin = sPlusList[y].map((x) => x.querySelector(".emp-name"));
-        sPlusA.push(sPlusFin.map((x) => x.textContent));
+        const sPlusFin = sPlusList[y].map((x) => x.querySelector('noscript'));
+        sPlusA.push(sPlusFin.map((x) => x.textContent.substring(x.textContent.indexOf('alt="')+5, x.textContent.indexOf('"/></picture>'))));
       }
 
       // S Data
@@ -30,8 +31,8 @@ try {
       const sList = sChar.map((x) => x.querySelectorAll(".avatar-card"));
 
       for (y = 0; y < sList.length; y++) {
-        const sFin = sList[y].map((x) => x.querySelector(".emp-name"));
-        sA.push(sFin.map((x) => x.textContent));
+        const sFin = sList[y].map((x) => x.querySelector('noscript'));
+        sA.push(sFin.map((x) => x.textContent.substring(x.textContent.indexOf('alt="')+5, x.textContent.indexOf('"/></picture>'))));
       }
 
       // A Data
@@ -41,8 +42,8 @@ try {
       const aList = aChar.map((x) => x.querySelectorAll(".avatar-card"));
     
       for(y = 0; y < aList.length; y++){
-        const aFin = aList[y].map((x) => x.querySelector(".emp-name"))
-        aA.push(aFin.map((x) => x.textContent));
+        const aFin = aList[y].map((x) => x.querySelector('noscript'))
+        aA.push(aFin.map((x) => x.textContent.substring(x.textContent.indexOf('alt="')+5, x.textContent.indexOf('"/></picture>'))));
       }
     
       // B Data
@@ -52,8 +53,8 @@ try {
       const bList = bChar.map((x) => x.querySelectorAll(".avatar-card"));
     
       for(y = 0; y < bList.length; y++){
-        const bFin = bList[y].map((x) => x.querySelector(".emp-name"))
-        bA.push(bFin.map((x) => x.textContent));
+        const bFin = bList[y].map((x) => x.querySelector('noscript'))
+        bA.push(bFin.map((x) => x.textContent.substring(x.textContent.indexOf('alt="')+5, x.textContent.indexOf('"/></picture>'))));
       }
     
       // C Data
@@ -63,8 +64,8 @@ try {
       const cList = cChar.map((x) => x.querySelectorAll(".avatar-card"));
     
       for(y = 0; y < cList.length; y++){
-        const cFin = cList[y].map((x) => x.querySelector(".emp-name"))
-        cA.push(cFin.map((x) => x.textContent));
+        const cFin = cList[y].map((x) => x.querySelector('noscript'))
+        cA.push(cFin.map((x) => x.textContent.substring(x.textContent.indexOf('alt="')+5, x.textContent.indexOf('"/></picture>'))));
       }
 
         // D Data
@@ -74,8 +75,8 @@ try {
         const dList = dChar.map((x) => x.querySelectorAll(".avatar-card"));
       
         for(y = 0; y < cList.length; y++){
-          const dFin = dList[y].map((x) => x.querySelector(".emp-name"))
-          dA.push(dFin.map((x) => x.textContent));
+          const dFin = dList[y].map((x) => x.querySelector('noscript'))
+          dA.push(dFin.map((x) => x.textContent.substring(x.textContent.indexOf('alt="')+5, x.textContent.indexOf('"/></picture>'))));
         }
 
       router.get("/", function (req, res, next) {
